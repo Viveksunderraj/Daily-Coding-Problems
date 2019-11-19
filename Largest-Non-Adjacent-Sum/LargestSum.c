@@ -6,7 +6,7 @@ int max(int a, int b) {
 int findLargestSum(int a[],int n) {
   int maxSum[n];
   maxSum[0]=a[0];
-
+// The max sum at an index is either sum of index + a[i-2] or a[i-2])
   for (int i=1;i<n;i++) {
     if(i>=2)
     maxSum[i] = max(a[i]+maxSum[i-2],maxSum[i-1]);
